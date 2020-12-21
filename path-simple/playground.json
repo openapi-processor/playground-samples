@@ -1,0 +1,9 @@
+{
+  "name": "simple path parameters",
+  "description": "an api with a simple path parameter.",
+  "openapi": "openapi.yaml",
+  "mapping": {
+    "spring": "mapping.yaml",
+    "micronaut": "mapping.yaml"
+  }
+}

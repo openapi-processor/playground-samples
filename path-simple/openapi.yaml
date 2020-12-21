@@ -1,0 +1,24 @@
+openapi: 3.0.2
+info:
+  title: simple path parameters
+  version: 1.0.0
+
+paths:
+  /path/{foo}:
+    get:
+      tags:
+        - endpoint
+      parameters:
+        - name: foo
+          description: path parameters must be required
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: plain text response
+          content:
+            plain/text:
+              schema:
+                type: string
