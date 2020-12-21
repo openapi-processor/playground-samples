@@ -3,7 +3,7 @@
   "description": "an api with a simple required & an optional query parameter.",
   "openapi": "openapi.yaml",
   "mapping": {
-    "spring": "mapping-yaml",
-    "micronaut": "mapping-yaml"
+    "spring": "mapping.yaml",
+    "micronaut": "mapping.yaml"
   }
 }
