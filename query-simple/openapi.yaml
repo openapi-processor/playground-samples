@@ -1,0 +1,31 @@
+openapi: 3.0.2
+info:
+  title: simple query parameters
+  version: 1.0.0
+
+paths:
+  /query:
+    get:
+      tags:
+        - endpoint
+      parameters:
+        - name: foo
+          description: this one is required
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: bar
+          description: this one is optional and has a default value
+          in: query
+          required: false
+          schema:
+            type: string
+            default: bar
+      responses:
+        '200':
+          description: plain text response
+          content:
+            plain/text:
+              schema:
+                type: string
