@@ -1,0 +1,9 @@
+{
+  "name": "empty api (& mapping)",
+  "description": "minimal content, ready for editing.",
+  "openapi": "openapi.yaml",
+  "mapping": {
+    "spring": "mapping.yaml",
+    "micronaut": "mapping.yaml"
+  }
+}
