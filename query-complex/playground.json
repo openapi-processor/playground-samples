@@ -1,0 +1,9 @@
+{
+  "name": "object query parameter",
+  "description": "an api with an pojo object created from the query parameters.",
+  "openapi": "openapi.yaml",
+  "mapping": {
+    "spring": "mapping.yaml",
+    "micronaut": "mapping.yaml"
+  }
+}
