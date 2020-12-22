@@ -1,0 +1,9 @@
+{
+  "name": "map a result wrapper",
+  "description": "wrap the endpoint result with a response wrapper to configure response properties.",
+  "openapi": "openapi.yaml",
+  "mapping": {
+    "spring": "mapping-spring.yaml",
+    "micronaut": "mapping-micronaut.yaml"
+  }
+}
