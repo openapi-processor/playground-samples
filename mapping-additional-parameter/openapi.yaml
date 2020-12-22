@@ -1,0 +1,17 @@
+openapi: 3.0.2
+info:
+  title: additional parameter mapping
+  version: 1.0.0
+
+paths:
+  /parameter/add:
+    get:
+      tags:
+        - endpoint
+      responses:
+        '200':
+          description: simple result
+          content:
+            text/plain:
+              schema:
+                type: string

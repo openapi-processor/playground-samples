@@ -1,0 +1,12 @@
+openapi-processor-mapping: v2
+
+options:
+  package-name: io.openapiprocessor.generated
+
+map:
+
+  # path mappings apply only to the given endpoint
+  paths:
+    /parameter/add:
+      parameters:
+        - add: request => io.micronaut.http.HttpRequest<?>
