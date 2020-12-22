@@ -1,0 +1,9 @@
+{
+  "name": "map paging query parameters by response",
+  "description": "map  paging query parameters to a framework pageable type by using a response mapping.",
+  "openapi": "openapi.yaml",
+  "mapping": {
+    "spring": "mapping-spring.yaml",
+    "micronaut": "mapping-micronaut.yaml"
+  }
+}
