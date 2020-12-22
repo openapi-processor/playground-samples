@@ -1,6 +1,6 @@
 {
   "name": "map query parameters to a Map<>",
-  "description": "map (object) query parameters to a Map<>.",
+  "description": "map (object) query parameters to a Map<> with generic parameters.",
   "openapi": "openapi.yaml",
   "mapping": {
     "spring": "mapping.yaml",
