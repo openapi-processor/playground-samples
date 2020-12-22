@@ -1,0 +1,9 @@
+{
+  "name": "map the array type",
+  "description": "map the openapi array to a \"list\" type.",
+  "openapi": "openapi.yaml",
+  "mapping": {
+    "spring": "mapping.yaml",
+    "micronaut": "mapping.yaml"
+  }
+}
