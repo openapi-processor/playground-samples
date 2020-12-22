@@ -1,6 +1,6 @@
 openapi: 3.0.2
 info:
-  title: a pageable api
+  title: a pageable api description with less schemas by describing the page response inline
   version: 1.0.0
 
 paths:
