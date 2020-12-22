@@ -1,0 +1,9 @@
+openapi-processor-mapping: v2
+
+options:
+  package-name: io.openapiprocessor.generated
+
+map:
+  types:
+    - type: Pageable => io.micronaut.data.model.Pageable
+    - type: StringPage => io.micronaut.data.model.Page<java.lang.String>

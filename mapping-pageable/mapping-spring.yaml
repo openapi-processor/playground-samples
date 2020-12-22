@@ -1,0 +1,9 @@
+openapi-processor-mapping: v2
+
+options:
+  package-name: io.openapiprocessor.generated
+
+map:
+  types:
+    - type: Pageable => org.springframework.data.domain.Pageable
+    - type: StringPage => org.springframework.data.domain.Page<java.lang.String>
