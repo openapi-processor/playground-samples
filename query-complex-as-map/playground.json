@@ -1,0 +1,9 @@
+{
+  "name": "map query parameters to a Map<>",
+  "description": "map (object) query parameters to a Map<>.",
+  "openapi": "openapi.yaml",
+  "mapping": {
+    "spring": "mapping.yaml",
+    "micronaut": "mapping.yaml"
+  }
+}

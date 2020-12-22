@@ -1,0 +1,38 @@
+openapi: 3.0.2
+info:
+  title: mapping to map with generic parameters
+  version: 1.0.0
+
+paths:
+
+  /query-map:
+    get:
+      description: <
+        maps parameters to a \`Map\` defined in the mapping.yaml
+
+           /query-map?foo=hello&bar=5
+
+      parameters:
+        - name: fooBar
+          description: query parameter object
+          in: query
+          schema:
+            $ref: '#/components/schemas/FooBar'
+      responses:
+        '200':
+          description: plain text response
+          content:
+            plain/text:
+              schema:
+                type: string
+
+components:
+  schemas:
+    FooBar:
+      type: object
+      properties:
+        foo:
+          type: string
+        bar:
+          type: integer
+          format: int64

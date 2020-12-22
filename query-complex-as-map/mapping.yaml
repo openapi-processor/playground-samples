@@ -1,0 +1,10 @@
+openapi-processor-mapping: v2
+
+options:
+  package-name: io.openapiprocessor.generated
+
+map:
+  types:
+    # this maps the FooBar type from the openapi.yaml to a java map
+    # it allows to specify generic parameters!
+    - type: FooBar => java.util.Map<java.lang.String, java.lang.String>
