@@ -1,7 +1,13 @@
 openapi: 3.0.2
 info:
-  title: name me
+  title: edit me
   version: 1.0.0
 
 paths:
   # edit me....
+  /nothing:
+    description: dummy
+    get:
+      responses:
+        '204':
+          description: empty
