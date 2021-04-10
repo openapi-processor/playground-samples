@@ -1,0 +1,9 @@
+{
+  "name": "response with multiple media-types",
+  "description": "an api with a multi media-type response. Generates multiple methods.",
+  "openapi": "openapi.yaml",
+  "mapping": {
+    "spring": "mapping.yaml",
+    "micronaut": "mapping.yaml"
+  }
+}
