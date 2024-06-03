@@ -1,0 +1,9 @@
+{
+  "name": "type mappings",
+  "description": "map OpenAPI types to Java types.",
+  "openapi": "openapi.yaml",
+  "mapping": {
+    "spring": "mapping.yaml",
+    "micronaut": "mapping.yaml"
+  }
+}
