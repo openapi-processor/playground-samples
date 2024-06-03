@@ -25,7 +25,8 @@ paths:
 
   /foo:
     types:
-      - type: string:uuid => java.util.UUID_2
+      - type: string:uuid => endpoint.UUID
 
     post:
-      - type: string:uuid => java.util.UUID_3
+      types:
+        - type: string:uuid => post.UUID
