@@ -11,7 +11,8 @@ paths:
           name: id
           required: true
           schema:
-            type: string:uuid
+            type: string
+            format: uuid
         - in: query
           name: bar
           required: true
