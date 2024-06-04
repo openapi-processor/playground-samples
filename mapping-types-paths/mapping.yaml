@@ -1,0 +1,48 @@
+openapi-processor-mapping: v7
+
+options:
+  package-name: io.openapiprocessor.generated
+
+map:
+  # global mappings
+
+  types:
+    # map openapi array to a collection
+    - type: array => java.util.Collection
+
+    # replace type with format by existing class
+    - type: string:uuid => java.util.UUID
+
+paths:
+  # path specific mappings
+
+  # it is possible to limit a mapping to a specific endpoint and http method.
+  # the most specific mapping is used (i.e. http method is more specific than
+  # endpoint, endpoint is more specific than global)
+
+  # Important: path mappings are applied to parameters only not to component
+  # schema objects!
+  #
+  # a component can be used by multiple endpoints with different mappings
+  # which would lead to an ambiguous definition.
+
+  /foo/{id}:
+    types:
+      # overrides the global default mapping of string to java.util.String
+      - type: string => another.special.String
+
+       # path mapping is useful to override the global array mapping
+      - type: array => java.util.Set
+
+    get:
+      types:
+        - type: string:uuid => endpoint.UUID
+
+      # path mapping is useful in combination with a parameter mapping to add
+      # additional parameters just for a specific endpoint.
+      parameters:
+        # for Spring
+        - add: request => javax.servlet.http.HttpServletRequest
+
+        # for Micronaut
+        # - add: request => io.micronaut.http.HttpRequest<?>

@@ -1,6 +1,6 @@
 {
-  "name": "map the array type",
-  "description": "map the openapi array to a \"list\" type.",
+  "name": "path type mappings",
+  "description": "map OpenAPI types to Java types by path.",
   "openapi": "openapi.yaml",
   "mapping": {
     "spring": "mapping.yaml",

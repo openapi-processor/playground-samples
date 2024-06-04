@@ -1,24 +1,31 @@
 openapi: 3.1.0
 info:
-  title: array mapping
-  version: 1.0.0
+  title: path type mappings
+  version: '1'
 
 paths:
-  /array:
-    post:
-      tags:
-        - endpoint
+  /foo/{id}:
+    get:
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string:uuid
+        - in: query
+          name: bar
+          required: true
+          schema:
+            type: string
       requestBody:
         content:
           application/json:
             schema:
-              type: array
-              items:
-                $ref: '#/components/schemas/Foo'
+              $ref: '#/components/schemas/Foo'
         required: true
       responses:
         '200':
-          description: created book
+          description: the Bar
           content:
             application/json:
               schema:
@@ -34,6 +41,7 @@ components:
       properties:
         foo:
           type: string
+          format: uuid
 
     Bar:
       type: object
