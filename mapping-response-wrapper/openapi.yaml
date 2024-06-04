@@ -1,13 +1,11 @@
 openapi: 3.1.0
 info:
   title: result mapping
-  version: 1.0.0
+  version: '1'
 
 paths:
   /response:
     get:
-      tags:
-        - endpoint
       responses:
         '200':
           description: simple result
