@@ -1,0 +1,23 @@
+openapi-processor-mapping: v7
+
+options:
+  package-name: io.openapiprocessor.generated
+
+map:
+  # global mappings
+
+  # by OpenAPI type
+  types:
+    # map openapi array to a collection
+    - type: array => java.util.Collection
+
+    # replace type with format by existing class
+    - type: string:uuid => java.util.UUID
+
+    # will use existing class MappedBar instead of generating Bar
+    # - type: Bar => io.openapiprocessor.MappedBar
+
+  # by OpenAPI parameter name
+  parameters:
+    # usually a global mapping by type is better than a mapping by parameter name
+    - name: date => java.time.Instant

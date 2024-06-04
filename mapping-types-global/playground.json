@@ -1,5 +1,5 @@
 {
-  "name": "type mappings",
+  "name": "global type mappings",
   "description": "map OpenAPI types to Java types.",
   "openapi": "openapi.yaml",
   "mapping": {
