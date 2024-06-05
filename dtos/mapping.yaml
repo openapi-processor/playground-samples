@@ -9,3 +9,6 @@ options:
   # create dtos as pojo (default) or as record (record)
   model-type: default
 #  model-type: record
+
+  # this will create marker interfaces for a oneOf schema list
+  one-of-interface: true

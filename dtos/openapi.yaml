@@ -8,18 +8,28 @@ paths:
   /foo:
     get:
       parameters:
-        - name: fooBar
-          description: query parameter object
+        - name: foo
+          description: parameter dto
           in: query
           schema:
             $ref: '#/components/schemas/Foo'
       responses:
         '200':
-          description: plain text response
+          description: object response
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Bar'
+
+  /oneof:
+    get:
+      responses:
+        '200':
+          description: oneOf
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FooFoo'
 
 components:
   schemas:
@@ -47,4 +57,30 @@ components:
               type: string
       properties:
         bar:
+          type: string
+
+
+    # if the one-of-interface option is true a marker interface FooOneOf will be generated,
+    # otherwise the processor will use Object.
+    FooFoo:
+      type: object
+      properties:
+        foo:
+          $ref: '#/components/schemas/FooOneOf'
+
+    FooOneOf:
+      oneOf:
+        - $ref: '#/components/schemas/FooOne'
+        - $ref: '#/components/schemas/FooTwo'
+
+    FooOne:
+      type: object
+      properties:
+        one:
+          type: string
+
+    FooTwo:
+      type: object
+      properties:
+        two:
           type: string
