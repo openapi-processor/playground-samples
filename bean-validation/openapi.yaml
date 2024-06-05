@@ -13,7 +13,15 @@ paths:
           in: query
           required: true
           schema:
-            $ref: '#/components/schemas/FooBar'
+            $ref: '#/components/schemas/Foo'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/Bar'
+        required: true
       responses:
         '200':
           description: plain text response
@@ -25,7 +33,7 @@ paths:
 components:
   schemas:
 
-    FooBar:
+    Foo:
       type: object
       required:
         - foo
@@ -38,3 +46,17 @@ components:
           format: int64
           minimum: 1
           maximum: 12
+
+    Bar:
+      type: object
+      properties:
+        bar:
+          type: string
+          maxLength: 10
+
+    FooBar:
+      type: object
+      properties:
+        foobar:
+          type: string
+          minLength: 1
