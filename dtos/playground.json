@@ -1,0 +1,9 @@
+{
+  "name": "DTOs",
+  "description": "DTO options",
+  "openapi": "openapi.yaml",
+  "mapping": {
+    "spring": "mapping.yaml",
+    "micronaut": "mapping.yaml"
+  }
+}

@@ -1,0 +1,11 @@
+openapi-processor-mapping: v7
+
+options:
+  package-name: io.openapiprocessor.generated
+
+  # this will add Resource as suffix to all generated dto classes
+  model-name-suffix: Resource
+
+  # create dtos as pojo (default) or as record (record)
+  model-type: default
+#  model-type: record
