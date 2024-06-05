@@ -1,9 +1,0 @@
-{
-  "name": "map an additional endpoint parameter",
-  "description": "add a parameter to a controller method that is not described in the api.",
-  "openapi": "openapi.yaml",
-  "mapping": {
-    "spring": "mapping-spring.yaml",
-    "micronaut": "mapping-micronaut.yaml"
-  }
-}
