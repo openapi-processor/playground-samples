@@ -12,19 +12,19 @@ paths:
           description: query parameter object
           in: query
           schema:
-            $ref: '#/components/schemas/FooBar'
+            $ref: '#/components/schemas/Foo'
       responses:
         '200':
           description: plain text response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/FooBar'
+                $ref: '#/components/schemas/Bar'
 
 components:
   schemas:
 
-    FooBar:
+    Foo:
       type: object
       properties:
         foo:
@@ -32,3 +32,19 @@ components:
         bar:
           type: integer
           format: int64
+
+    # a schema with allOf creates single flattened DTO
+    Bar:
+      type: object
+      allOf:
+        - type: object
+          properties:
+            foo1:
+              type: string
+        - type: object
+          properties:
+            foo2:
+              type: string
+      properties:
+        bar:
+          type: string
