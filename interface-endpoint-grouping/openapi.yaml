@@ -10,6 +10,9 @@ paths:
 
   /path/first:
     get:
+      # with operationId we influence the endpoint method name.
+      # the auto generated name is getFirst(), enabling operationId it is doFirst()
+      #operationId: do_first
       tags:
         - groupA
       responses:
