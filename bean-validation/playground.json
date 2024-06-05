@@ -1,0 +1,9 @@
+{
+  "name": "bean validation",
+  "description": "OpenAPI constraints to bean validations",
+  "openapi": "openapi.yaml",
+  "mapping": {
+    "spring": "mapping.yaml",
+    "micronaut": "mapping.yaml"
+  }
+}

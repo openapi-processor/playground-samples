@@ -1,0 +1,10 @@
+openapi-processor-mapping: v7
+
+options:
+  package-name: io.openapiprocessor.generated
+
+  # enable bean validations:
+  #  javax - use the old javax package
+  #  jakarta - use the new jakarta package
+  bean-validation: jakarta
+
