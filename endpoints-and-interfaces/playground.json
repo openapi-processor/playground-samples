@@ -1,6 +1,6 @@
 {
-  "name": "grouping endpoints",
-  "description": "endpoints are grouped by tag into interfaces.",
+  "name": "endpoints & interface",
+  "description": "endpoint grouping and naming.",
   "openapi": "openapi.yaml",
   "mapping": {
     "spring": "mapping.yaml",
