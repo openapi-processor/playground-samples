@@ -1,0 +1,33 @@
+openapi: 3.1.0
+info:
+  title: endpoint grouping
+  version: '1'
+
+paths:
+
+  # endpoints with the same first "tag" are grouped into the same interface with name
+  # <tag>Api. For this api we will see two interfaces GroupAApi & GroupBApi
+
+  /path/first:
+    get:
+      tags:
+        - groupA
+      responses:
+        '204':
+          description: empty
+
+  /path/second:
+    get:
+      tags:
+        - groupB
+      responses:
+        '204':
+          description: empty
+
+  /path/third:
+    get:
+      tags:
+        - groupB
+      responses:
+        '204':
+          description: empty

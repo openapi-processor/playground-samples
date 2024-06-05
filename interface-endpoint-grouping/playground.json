@@ -1,0 +1,9 @@
+{
+  "name": "grouping endpoints",
+  "description": "endpoints are grouped by tag into interfaces.",
+  "openapi": "openapi.yaml",
+  "mapping": {
+    "spring": "mapping.yaml",
+    "micronaut": "mapping.yaml"
+  }
+}
