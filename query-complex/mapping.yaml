@@ -2,3 +2,4 @@ openapi-processor-mapping: v7
 
 options:
   package-name: io.openapiprocessor.generated
+  javadoc: true
