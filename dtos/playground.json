@@ -1,6 +1,6 @@
 {
   "name": "DTOs",
-  "description": "DTO options",
+  "description": "DTO options: suffix, pojo or record.",
   "openapi": "openapi.yaml",
   "mapping": {
     "spring": "mapping.yaml",
