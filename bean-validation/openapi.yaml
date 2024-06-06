@@ -6,9 +6,11 @@ info:
 paths:
 
   /foo:
-    summary: sample endpoint
+    summary: sample endpoint.
     description: sample endpoint with a couple of _constraints_
     get:
+      summary: sample get endpoint.
+      description: sample get endpoint with a couple of _constraints_
       parameters:
         - name: fooBar
           description: parameter object with constraint
