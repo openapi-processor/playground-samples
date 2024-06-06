@@ -8,3 +8,6 @@ options:
   #  jakarta - use the new jakarta package
   bean-validation: jakarta
 
+  # generate javadoc for summary & description fields.
+  javadoc: true
+

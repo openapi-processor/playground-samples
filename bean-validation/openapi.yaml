@@ -6,15 +6,17 @@ info:
 paths:
 
   /foo:
+    description: sample endpoint with constraints
     get:
       parameters:
         - name: fooBar
-          description: query parameter object
+          description: parameter object with constraint
           in: query
           required: true
           schema:
             $ref: '#/components/schemas/Foo'
       requestBody:
+        description: the request body array with @Valid
         content:
           application/json:
             schema:
@@ -24,7 +26,7 @@ paths:
         required: true
       responses:
         '200':
-          description: plain text response
+          description: result object with constraints
           content:
             application/json:
               schema:
@@ -35,13 +37,16 @@ components:
 
     Foo:
       type: object
+      description: I am Foo.
       required:
         - foo
       properties:
         foo:
+          description: property with pattern constraint
           type: string
           pattern: .*\.\\
         bar:
+          description: property with min/max constraints
           type: integer
           format: int64
           minimum: 1
@@ -49,13 +54,16 @@ components:
 
     Bar:
       type: object
+      description: I am Bar.
       properties:
         bar:
+          description: property with length constraints
           type: string
           maxLength: 10
 
     FooBar:
       type: object
+      description: I am FooBar.
       properties:
         foobar:
           type: string
