@@ -6,8 +6,6 @@ info:
 paths:
 
   /foo:
-    summary: sample endpoint.
-    description: sample endpoint with a couple of _constraints_
     get:
       summary: sample get endpoint.
       description: sample get endpoint with a couple of _constraints_
