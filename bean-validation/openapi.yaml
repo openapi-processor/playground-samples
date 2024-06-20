@@ -1,6 +1,6 @@
 openapi: 3.1.0
 info:
-  title: DTOs
+  title: bean validation
   version: '1'
 
 paths:
