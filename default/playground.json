@@ -1,0 +1,10 @@
+{
+  "name": "extensive mappings",
+  "description": "show many options & mapping variations",
+  "openapi": "openapi.yaml",
+  "mapping": {
+    "spring": "mapping.yaml",
+    "micronaut": "mapping.yaml"
+  },
+  "sort": 1
+}
