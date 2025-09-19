@@ -1,4 +1,4 @@
-openapi-processor-mapping: v7
+openapi-processor-mapping: v14
 
 options:
   package-name: io.openapiprocessor.generated

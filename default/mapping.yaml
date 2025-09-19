@@ -1,5 +1,5 @@
 # mapping format (required)
-openapi-processor-mapping: v8
+openapi-processor-mapping: v14
 
 ##
 ## general processor options (required)
