@@ -1,10 +1,10 @@
 {
-  "name": "simple path parameters",
-  "description": "an api with a simple path parameter.",
+  "name": "bean validation",
+  "description": "OpenAPI constraints to bean validations.",
   "openapi": "openapi.yaml",
   "mapping": {
     "spring": "mapping.yaml",
     "micronaut": "mapping.yaml"
   },
-  "sort": 100
+  "sort": 25
 }

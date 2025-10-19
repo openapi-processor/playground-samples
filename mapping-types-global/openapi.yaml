@@ -1,13 +1,17 @@
-openapi: 3.0.2
+openapi: 3.1.0
 info:
-  title: array mapping
-  version: 1.0.0
+  title: type mappings
+  version: '1'
 
 paths:
-  /array:
+  /foo:
     post:
-      tags:
-        - endpoint
+      parameters:
+        - in: query
+          name: date
+          schema:
+            type: string:date-time
+
       requestBody:
         content:
           application/json:
@@ -16,9 +20,10 @@ paths:
               items:
                 $ref: '#/components/schemas/Foo'
         required: true
+
       responses:
         '200':
-          description: created book
+          description: the Bar
           content:
             application/json:
               schema:
@@ -34,6 +39,7 @@ components:
       properties:
         foo:
           type: string
+          format: uuid
 
     Bar:
       type: object

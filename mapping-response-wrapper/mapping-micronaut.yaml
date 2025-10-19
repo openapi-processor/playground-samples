@@ -1,8 +1,18 @@
-openapi-processor-mapping: v2
+openapi-processor-mapping: v14
 
 options:
   package-name: io.openapiprocessor.generated
 
 map:
-  # map a result wrapper
-  result: io.micronaut.http.HttpResponse
+  # with a result wrapper we can modify the http response if we need to.
+
+  # using it at the global level will wrap the normal result of any endpoint.
+  #result: io.micronaut.http.HttpResponse
+
+  paths:
+
+    # by adding it as a path mapping we can add it just to those endpoints where
+    # it is needed.
+    /response:
+      get:
+        result: io.micronaut.http.HttpResponse

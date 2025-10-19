@@ -1,4 +1,5 @@
-openapi-processor-mapping: v2
+openapi-processor-mapping: v14
 
 options:
   package-name: io.openapiprocessor.generated
+  javadoc: true

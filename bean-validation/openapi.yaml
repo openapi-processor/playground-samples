@@ -1,0 +1,71 @@
+openapi: 3.1.0
+info:
+  title: bean validation
+  version: '1'
+
+paths:
+
+  /foo:
+    get:
+      summary: sample get endpoint.
+      description: sample get endpoint with a couple of _constraints_
+      parameters:
+        - name: fooBar
+          description: parameter object with constraint
+          in: query
+          required: true
+          schema:
+            $ref: '#/components/schemas/Foo'
+      requestBody:
+        description: the request body array with @Valid
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/Bar'
+        required: true
+      responses:
+        '200':
+          description: result object with constraints
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FooBar'
+
+components:
+  schemas:
+
+    Foo:
+      type: object
+      description: I am Foo.
+      required:
+        - foo
+      properties:
+        foo:
+          description: property with pattern constraint
+          type: string
+          pattern: .*\.\\
+        bar:
+          description: property with min/max constraints
+          type: integer
+          format: int64
+          minimum: 1
+          maximum: 12
+
+    Bar:
+      type: object
+      description: I am Bar.
+      properties:
+        bar:
+          description: property with length constraints
+          type: string
+          maxLength: 10
+
+    FooBar:
+      type: object
+      description: I am FooBar.
+      properties:
+        foobar:
+          type: string
+          minLength: 1

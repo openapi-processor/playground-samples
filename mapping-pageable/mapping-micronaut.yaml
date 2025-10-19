@@ -1,9 +1,12 @@
-openapi-processor-mapping: v2
+openapi-processor-mapping: v14
 
 options:
   package-name: io.openapiprocessor.generated
 
 map:
+
+  # although the OpenAPI describes `Pageable` and `Page` schemas we don't want to generate
+  # DTO classes for them. We want to use frameworks pageable classes in our code.
   types:
     - type: Pageable => io.micronaut.data.model.Pageable
     - type: StringPage => io.micronaut.data.model.Page<java.lang.String>

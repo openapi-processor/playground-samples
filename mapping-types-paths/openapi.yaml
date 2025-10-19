@@ -1,0 +1,51 @@
+openapi: 3.1.0
+info:
+  title: path type mappings
+  version: '1'
+
+paths:
+  /foo/{id}:
+    get:
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+            format: uuid
+        - in: query
+          name: bar
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Foo'
+        required: true
+      responses:
+        '200':
+          description: the Bar
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Bar'
+
+components:
+  schemas:
+
+    Foo:
+      type: object
+      properties:
+        foo:
+          type: string
+          format: uuid
+
+    Bar:
+      type: object
+      properties:
+        bar:
+          type: string

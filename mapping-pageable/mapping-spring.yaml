@@ -1,9 +1,12 @@
-openapi-processor-mapping: v2
+openapi-processor-mapping: v14
 
 options:
   package-name: io.openapiprocessor.generated
 
 map:
+
+  # although the OpenAPI describes `Pageable` and `Page` schemas we don't want to generate
+  # DTO classes for them. We want to use frameworks pageable classes in our code.
   types:
     - type: Pageable => org.springframework.data.domain.Pageable
     - type: StringPage => org.springframework.data.domain.Page<java.lang.String>

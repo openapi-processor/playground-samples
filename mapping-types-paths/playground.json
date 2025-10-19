@@ -1,10 +1,10 @@
 {
-  "name": "simple path parameters",
-  "description": "an api with a simple path parameter.",
+  "name": "path type mappings",
+  "description": "map OpenAPI types to Java types by path.",
   "openapi": "openapi.yaml",
   "mapping": {
     "spring": "mapping.yaml",
     "micronaut": "mapping.yaml"
   },
-  "sort": 100
+  "sort": 35
 }

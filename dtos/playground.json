@@ -1,10 +1,10 @@
 {
-  "name": "simple path parameters",
-  "description": "an api with a simple path parameter.",
+  "name": "DTOs",
+  "description": "DTO options: suffix, pojo or record.",
   "openapi": "openapi.yaml",
   "mapping": {
     "spring": "mapping.yaml",
     "micronaut": "mapping.yaml"
   },
-  "sort": 100
+  "sort": 20
 }

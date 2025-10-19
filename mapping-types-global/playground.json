@@ -1,9 +1,10 @@
 {
-  "name": "map the array type",
-  "description": "map the openapi array to a \"list\" type.",
+  "name": "global type mappings",
+  "description": "map OpenAPI types to Java types.",
   "openapi": "openapi.yaml",
   "mapping": {
     "spring": "mapping.yaml",
     "micronaut": "mapping.yaml"
-  }
+  },
+  "sort": 30
 }

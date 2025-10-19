@@ -1,0 +1,36 @@
+openapi: 3.1.0
+info:
+  title: endpoint grouping
+  version: '1'
+
+paths:
+
+  # endpoints with the same first "tag" are grouped into the same interface with name
+  # <tag>Api. For this api we will see two interfaces GroupAApi & GroupBApi
+
+  /path/first:
+    get:
+      # the auto generated endpoint method name is getPathFirst(). Derived from its path.
+      # to provide a custom name provide an operationId (it gets converted to camel-case).
+      #operationId: do_first
+      tags:
+        - groupA
+      responses:
+        '204':
+          description: empty
+
+  /path/second:
+    get:
+      tags:
+        - groupB
+      responses:
+        '204':
+          description: empty
+
+  /path/third:
+    get:
+      tags:
+        - groupB
+      responses:
+        '204':
+          description: empty

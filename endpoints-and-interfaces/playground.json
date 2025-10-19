@@ -1,10 +1,10 @@
 {
-  "name": "simple path parameters",
-  "description": "an api with a simple path parameter.",
+  "name": "endpoints & interface",
+  "description": "endpoint grouping and naming.",
   "openapi": "openapi.yaml",
   "mapping": {
     "spring": "mapping.yaml",
     "micronaut": "mapping.yaml"
   },
-  "sort": 100
+  "sort": 10
 }
